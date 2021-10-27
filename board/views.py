@@ -3,4 +3,4 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 class Board(TemplateView):
-    template_name = "board.html"
+    template_name = "board/board.html"
