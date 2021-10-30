@@ -75,31 +75,31 @@ WSGI_APPLICATION = 'todolist_proj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "mssql",
-#         "NAME": "ToDoList",
-#         "USER": "CharlsCatipay",
-#         "PASSWORD": "Charls@123",
-#         "HOST": "Black",
-#         "PORT": "",
-#         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
-#         },
-#     },
-# }
-
 DATABASES = {
     "default": {
         "ENGINE": "mssql",
         "NAME": "ToDoList",
         "USER": "CharlsCatipay",
         "PASSWORD": "Charls@123",
-        "HOST": "CITGDEV02\MSSQLSERVER01",
+        "HOST": "Black",
         "PORT": "",
         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
         },
     },
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "mssql",
+#         "NAME": "ToDoList",
+#         "USER": "CharlsCatipay",
+#         "PASSWORD": "Charls@123",
+#         "HOST": "CITGDEV02\MSSQLSERVER01",
+#         "PORT": "",
+#         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+#         },
+#     },
+# }
 
 
 
