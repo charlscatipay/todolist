@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ToDoList - Login</title>
+        <!-- SweetAlert2 -->
+        <link rel="stylesheet" href="{% static 'vendor/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">  
+        <!-- CSS CUSTOM -->
+        <link rel="stylesheet" href="{% static 'css/login/login.css' %}">
+        <!-- iziToast -->
+        <link rel="stylesheet" href="{% static 'vendor/plugins/iziToast/iziToast.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/plugins/iziToast/iziToast.min.css' %}">
+    </head>
+    <body class="bg-light pt-5">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">ToDoList <span class="" style="color: orange">|</span> Login</h3></div>
+                                    <div class="card-body">
+                                        {% if error %}
+                                        <div class="alert alert-danger" role="alert">
+                                            {{ error }}
+                                        </div>
+                                        {% endif %}
+                                        <form method="POST" action="" id="form-login">
+                                            {% csrf_token %}
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" type="text" name="username" required="required"/>
+                                                <label for="inputUsername">Username</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" type="password" name="password" required="required"/>
+                                                <label for="inputPassword">Password</label>
+                                            </div>
+                                            <div class="mt-4 mb-0" align=center>
+                                                <input class="btn btn-primary" style="width:40%" type="button" value="Login" id='btn-login'/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="">Don't have an account? Go to Signup</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; ToDoList 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="{% static 'vendor/plugins/jquery/jquery.min.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- SweetAlert2 -->
+        <script src="{% static 'vendor/plugins/sweetalert2/sweetalert2.min.js' %}"></script> 
+        <!-- iziToast -->
+        <script src="{% static 'vendor/plugins/iziToast/iziToast.js' %}"></script>      
+        <script src="{% static 'vendor/plugins/iziToast/iziToast.min.js' %}"></script>      
+        <script src="{% static 'js/login/login.js' %}"></script>
+    </body>
+</html>
