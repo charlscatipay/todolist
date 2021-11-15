@@ -89,18 +89,18 @@ DATABASES = {
     },
 }
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "mssql",
-#         "NAME": "ToDoList",
-#         "USER": "CharlsCatipay",
-#         "PASSWORD": "Charls@123",
-#         "HOST": "CITGDEV02\MSSQLSERVER01",
-#         "PORT": "",
-#         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
-#         },
-#     },
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "mssql",
+        "NAME": "ToDoList",
+        "USER": "CharlsCatipay",
+        "PASSWORD": "Charls@123",
+        "HOST": "CITGDEV02\MSSQLSERVER01",
+        "PORT": "",
+        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+        },
+    },
+}
 
 
 

@@ -26,32 +26,40 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid d-flex" style="justify-content: space-between;">
-            <div class="">
-                <h4 class="m-0"><i class="fas fa-tasks text-warning ml-2"></i>&nbspToDoList</h4>
-            </div>
-            <div class="mr-2">
-                <div>
-                    <i class="far fa-user text-warning"></i>
-                    <span>&nbspCharls Catipay</span>
+    <div class="content-wrapper" 
+        data-host="{% if request.is_secure %}https://{{ request.get_host }}{% else %}http://{{ request.get_host }}{% endif %}"
+        data-mid="{{ request.GET.mid }}"
+        data-smid="{{ request.GET.smid }}"
+        data-tmid="{{ request.GET.tmid }}"
+        data-mdesc="{{ request.GET.mdesc }}"
+    >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid d-flex" style="justify-content: space-between;">
+                <div class="">
+                    <h4 class="m-0"><i class="fas fa-tasks text-warning ml-2"></i>&nbspToDoList</h4>
                 </div>
-                <div class="progress">
-                    <div
-                        class="progress-bar progress-bar-striped bg-warning"
-                        role="progressbar"
-                        style="width: 75%;"
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                    ></div>
+                <div class="mr-2">
+                    <div>
+                        <i class="far fa-user text-warning"></i>
+                        <span>&nbspCharls Catipay</span>
+                    </div>
+                    <div class="progress">
+                        <div
+                            class="progress-bar progress-bar-striped bg-warning"
+                            role="progressbar"
+                            style="width: 75%;"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                        ></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    {% block content %}
+        </nav>
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
+    </div>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
